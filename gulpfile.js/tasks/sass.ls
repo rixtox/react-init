@@ -17,4 +17,6 @@ gulp.task 'sass', ->
     .pipe gulpAutoprefixer config.sass.autoprefixer
     .pipe gulpRename config.sass.file
     .pipe gulp.dest config.sass.dest
-    .pipe browserSync.reload stream: true
+    .pipe browserSync.reload do
+      once: true
+      stream: true
