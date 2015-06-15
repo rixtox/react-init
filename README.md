@@ -9,6 +9,8 @@ Initial project for React web application development.
 * ES6 support
 * SASS support
 * Dependency CDN fallbacks
+* FontAwesome
+* Bootstrap
 
 ## Installation
 

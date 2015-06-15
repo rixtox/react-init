@@ -8,6 +8,7 @@ src =
 src.assets = join src.root, 'assets'
 src.jsx = join src.assets, 'jsx'
 src.sass = join src.assets, 'sass'
+src.fonts = join src.assets, 'fonts'
 
 dest =
   root: join base, 'public'
