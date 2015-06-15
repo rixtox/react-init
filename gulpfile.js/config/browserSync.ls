@@ -8,5 +8,6 @@ module.exports =
     middleware: [
       require('connect-history-api-fallback')!
     ]
+  open: false
   files:
     path.join paths.dest.root, 'index.html'
