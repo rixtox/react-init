@@ -2,10 +2,10 @@ require! gulp
 
 require! '../config'
 require! 'gulp-util'
-require! 'gulp-ruby-sass'
-require! 'gulp-minify-css'
 require! 'gulp-rename'
 require! 'browser-sync'
+require! 'gulp-ruby-sass'
+require! 'gulp-minify-css'
 require! 'gulp-sourcemaps'
 require! 'gulp-autoprefixer'
 

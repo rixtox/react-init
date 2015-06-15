@@ -15,6 +15,7 @@ export const Body = React.createClass({
         <div>
           <button type="button" className="btn btn-default">OK</button>
         </div>
+        <img src="/assets/images/browserify.png"/>
       </div>
     );
   }

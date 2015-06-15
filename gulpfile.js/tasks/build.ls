@@ -8,6 +8,7 @@ gulp.task 'build:development', (cb) ->
     [
       'fonts'
       'vendor'
+      'images'
       'sass:development'
       'html:development'
       'browserify:development'
@@ -24,6 +25,7 @@ gulp.task 'build:production', (cb) ->
     [
       'fonts'
       'vendor'
+      'images'
       'sass:production'
       'html:production'
       'browserify:production'

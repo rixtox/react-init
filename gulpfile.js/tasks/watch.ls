@@ -8,7 +8,7 @@ watch = require 'gulp-watch'
 gulp.task 'watch', ['browserSync'], ->
   watch do
     config.html.src
-    -> gulp.start 'html'
+    -> gulp.start 'html:development'
   watch do
     path.join config.paths.src.sass, '**/*.scss'
-    -> gulp.start 'sass'
+    -> gulp.start 'sass:development'
