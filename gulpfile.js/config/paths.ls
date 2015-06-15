@@ -14,6 +14,7 @@ dest =
 dest.assets = join dest.root, 'assets'
 dest.js = join dest.assets, 'js'
 dest.css = join dest.assets, 'css'
+dest.fonts = join dest.assets, 'fonts'
 dest.images = join dest.assets, 'images'
 dest.vendor = join dest.assets, 'vendor'
 

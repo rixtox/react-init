@@ -5,6 +5,15 @@ require! 'gulp-sequence'
 gulp.task 'build:development', (cb) ->
   gulpSequence do
     'clean'
-    ['vendor', 'browserify:development', 'html', 'sass']
-    ['watch', 'browserSync']
+    [
+      'sass'
+      'html'
+      'fonts'
+      'vendor'
+      'browserify:development'
+    ]
+    [
+      'watch'
+      'browserSync'
+    ]
     cb

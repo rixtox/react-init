@@ -1,4 +1,5 @@
 require! path
+require! glob
 
 require! './paths'
 
@@ -10,3 +11,6 @@ module.exports =
 
 module.exports.params.url = (p) ->
   path.join module.exports.params.basePath, p
+
+module.exports.params.css = glob.sync path.join paths.dest.css, '*.css'
+  .map (p) -> '/' + path.relative paths.dest.root, p

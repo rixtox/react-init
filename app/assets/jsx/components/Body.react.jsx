@@ -2,16 +2,16 @@ const React = require('react');
 
 
 export const Body = React.createClass({
-  getClassName() {
-    return 'foo';
-  },
-
   render() {
-    const x = 'x';
-
     return (
-      <div className={`${x} ${this.getClassName()} bar`}>
-        Hello, world!
+      <div>
+        <span>Hello </span>
+        <i className='fa fa-star'></i> 
+        <i className='glyphicon glyphicon-star-empty'></i> 
+        <i className='fa fa-star'></i> 
+        <span> world!</span>
+        <br/>
+        <button type="button" className="btn btn-default">OK</button>
       </div>
     );
   }
