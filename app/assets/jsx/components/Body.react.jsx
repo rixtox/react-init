@@ -5,7 +5,7 @@ export const Body = React.createClass({
   render() {
     return (
       <div>
-        <div>
+        <div className="hello-world">
           <span>Hello </span>
           <i className='fa fa-star'></i> 
           <i className='glyphicon glyphicon-star-empty'></i> 

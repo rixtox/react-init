@@ -1,3 +1,4 @@
+require! path
 require! gulp
 
 require! '../config'
@@ -5,5 +6,9 @@ require! '../config'
 watch = require 'gulp-watch'
 
 gulp.task 'watch', ['browserSync'], ->
-  watch config.html.src, -> gulp.start 'html'
-  watch config.sass.src, -> gulp.start 'sass'
+  watch do
+    config.html.src
+    -> gulp.start 'html'
+  watch do
+    path.join config.paths.src.sass, '**/*.scss'
+    -> gulp.start 'sass'

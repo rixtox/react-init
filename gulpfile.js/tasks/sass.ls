@@ -2,18 +2,19 @@ require! gulp
 
 require! '../config'
 require! 'gulp-util'
-require! 'gulp-sass'
-require! 'gulp-concat'
+require! 'gulp-ruby-sass'
+require! 'gulp-minify-css'
+require! 'gulp-rename'
 require! 'browser-sync'
 require! 'gulp-sourcemaps'
 require! 'gulp-autoprefixer'
 
 gulp.task 'sass', ->
-  gulp.src config.sass.src
-    .pipe gulpSass config.sass.options
+  gulpRubySass config.sass.src, config.sass.options
     .on 'error', gulpUtil.log
     .pipe gulpAutoprefixer config.sass.autoprefixer
-    .pipe gulpConcat config.sass.file
+    .pipe gulpMinifyCss config.sass.minifycss
+    .pipe gulpRename config.sass.file
     .pipe gulp.dest config.sass.dest
     .pipe browserSync.reload do
       once: true
