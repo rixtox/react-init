@@ -1,5 +1,7 @@
 # React Blank Project
 
+[ ![Codeship Status for rixtox/react-init](https://codeship.com/projects/e2157de0-f674-0132-b10e-4a20144c2bb9/status?branch=master)](https://codeship.com/projects/86071)
+
 Initial project for React web application development.
 
 ## Features
