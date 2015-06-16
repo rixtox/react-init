@@ -1,8 +1,29 @@
-const React = require('react');
+import React from 'react/addons';
 
+export default React.createClass({
+  getInitialState() {
+    return {
+      showImage: false
+    };
+  },
 
-export const Body = React.createClass({
+  toggleImage() {
+    this.setState({
+      showImage: !this.state.showImage
+    });
+  },
+
   render() {
+    var buttonText,
+        imageView = null;
+    if (this.state.showImage) {
+      buttonText = 'Hide Image';
+      imageView = <div className="image-view">
+                    <img src="/assets/images/browserify.png"/>
+                  </div>;
+    } else {
+      buttonText = 'Show Image';
+    }
     return (
       <div>
         <div className="hello-world">
@@ -13,9 +34,14 @@ export const Body = React.createClass({
           <span> world!</span>
         </div>
         <div>
-          <button type="button" className="btn btn-default">OK</button>
+          <button
+            type="button"
+            className="btn btn-default"
+            onClick={this.toggleImage}>
+              {buttonText}
+          </button>
         </div>
-        <img src="/assets/images/browserify.png"/>
+        {imageView}
       </div>
     );
   }

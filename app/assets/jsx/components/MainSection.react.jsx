@@ -1,7 +1,7 @@
-const React = require('react');
-import {Body} from './Body.react';
+import React from 'react/addons';
+import Body from './Body.react';
 
-export const MainSection = React.createClass({
+export default React.createClass({
   getClassName() {
     return 'container';
   },

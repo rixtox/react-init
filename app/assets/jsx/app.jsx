@@ -1,5 +1,5 @@
-const React = require('react');
-import {MainSection} from './components/MainSection.react.jsx';
+import React from 'react/addons';
+import MainSection from './components/MainSection.react';
 
 const render = () => React.render(
     <MainSection />,
