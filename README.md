@@ -17,13 +17,37 @@ Initial project for React web application development.
 ## Installation
 
 ```
-bower install
 npm install
+npm install -g gulp bower
+bower install
+gem install sass
 ```
 
-After the installation, run `gulp` to compile and view the page.
+## Usage
 
-For tests, run `npm test`.
+The build pipeline generates static files under `public` folder.
+
+### Development
+
+```
+gulp
+```
+
+A [Browsersync](http://www.browsersync.io) server is created at [http://localhost:3000](http://localhost:3000).
+
+The pipeline will watch all your source code changes, and automatically rebuild and reload your browsers.
+
+### Production
+
+```
+gulp build:production
+```
+
+### Test
+
+```
+npm test
+```
 
 ## Notes
 
