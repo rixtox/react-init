@@ -4,8 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Nebular</title>
   <link rel="shortcut icon" href="<%= url('assets/images/favicon.ico') %>" type="image/x-icon">
-  <% _.each(css(), function(p) { %><link rel="stylesheet" type="text/css" href="<%= p %>">
-  <% }); %>
 </head>
 <body>
   <div class="container">
@@ -13,6 +11,14 @@
   </div>
   <script src="<%= url('assets/vendor/require/index.js') %>"></script>
   <script>
+    function loadCss(url) {
+      var link = document.createElement("link");
+      link.type = "text/css";
+      link.rel = "stylesheet";
+      link.href = url;
+      document.getElementsByTagName("head")[0].appendChild(link);
+    }
+
     requirejs.config({
       baseUrl: '<%= basePath %>',
       paths: {
@@ -38,6 +44,8 @@
       }
     });
 
+    <% _.each(css(), function(p) { %>loadCss('<%= p %>');
+    <% }); %>
     requirejs(['jQuery', 'jQuery.ui'], function() {
       requirejs(['app']);
     });
