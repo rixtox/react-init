@@ -31,7 +31,8 @@ requirejs.config({
     'app': 'assets/js/app'
   },
   shim: {
-    'jQuery.ui': ['jQuery']
+    'jQuery.ui': ['jQuery'],
+    'bootstrap': ['jQuery']
   }
 });
 
