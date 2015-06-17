@@ -24,6 +24,10 @@ requirejs.config({
       '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min',
       'assets/vendor/jquery-ui.min'
     ],
+    'bootstrap': [
+      '//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min',
+      'assets/vendor/bootstrap.min'
+    ],
     'app': 'assets/js/app'
   },
   shim: {
@@ -33,6 +37,6 @@ requirejs.config({
 
 <% _.each(css(), function(p) { %>loadCss('<%= p %>');
 <% }); %>
-requirejs(['jQuery', 'jQuery.ui'], function() {
+requirejs(['jQuery', 'jQuery.ui', 'bootstrap'], function() {
   requirejs(['app']);
 });
