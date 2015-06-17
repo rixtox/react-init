@@ -6,6 +6,7 @@ base = resolve __dirname, '../../'
 src =
   root: join base, 'app'
 src.assets = join src.root, 'assets'
+src.js = join src.assets, 'js'
 src.jsx = join src.assets, 'jsx'
 src.sass = join src.assets, 'sass'
 src.fonts = join src.assets, 'fonts'

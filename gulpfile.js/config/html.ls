@@ -8,6 +8,9 @@ module.exports =
   dest: paths.dest.root
   params:
     basePath: '/'
+  minify:
+    conditionals: true
+    spare: true
 
 module.exports.params.url = (p) ->
   path.join module.exports.params.basePath, p
