@@ -13,7 +13,6 @@ gulp.task 'sass:development', ->
   gulpRubySass config.sass.src, config.sass.options
     .on 'error', gulpUtil.log
     .pipe gulpAutoprefixer config.sass.autoprefixer
-    .pipe gulpMinifyCss config.sass.minifycss
     .pipe gulpRename config.sass.file
     .pipe gulp.dest config.sass.dest
     .pipe browserSync.reload do

@@ -7,7 +7,6 @@ module.exports =
   dest: path.join paths.dest.css
   file: 'style.css'
   options:
-    style: 'compressed'
     loadPath:
       path.join paths.bower, 'bootstrap-sass-official/assets/stylesheets'
       path.join paths.bower, 'fontawesome/scss'
